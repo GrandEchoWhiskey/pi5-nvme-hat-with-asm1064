@@ -10,7 +10,7 @@ nano ~/fix.dts
 ```
 
 > - replace `pcie@1..` to `p1: pcie@1..`
-> - replace `<0x..>` to `<&p1>`
+> - replace `msi-parrent: <0x..>` to `msi-parrent: <&p1>`
 
 ```bash
 dtc -I dts -O dtb ~/fix.dts -o ~/fix.dtb
