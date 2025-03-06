@@ -19,4 +19,4 @@ rm ~/fix.dts
 reboot
 ```
 
-### Python script comming soon!
+### Python script not yet tested!
