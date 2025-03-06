@@ -20,3 +20,5 @@ reboot
 ```
 
 ### Python script not yet tested!
+
+> It should work also with ASM1166
