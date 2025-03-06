@@ -5,16 +5,16 @@ This procedure modifies the Raspberry Pi 5 device tree to improve compatibility 
 ```bash
 sudo su
 sudo cp /boot/firmware/bcm2712-rpi-5-b.dtb /boot/firmware/bcm2712-rpi-5-b.dtb.bak
-dtc -I dtb -O dts /boot/firmware/bcm2712-rpi-5-b.dtb -o ~/test.dts
-nano ~/test.dts
+dtc -I dtb -O dts /boot/firmware/bcm2712-rpi-5-b.dtb -o ~/fix.dts
+nano ~/fix.dts
 ```
 
 > - replace `pcie@1..` to `p1: pcie@1..`
 > - replace `<0x..>` to `<&p1>`
 
 ```bash
-dtc -I dts -O dtb ~/test.dts -o ~/test.dtb
-sudo mv ~/test.dtb /boot/firmware/bcm2712-rpi-5-b.dtb
-rm ~/test.dts
+dtc -I dts -O dtb ~/fix.dts -o ~/fix.dtb
+sudo mv ~/fix.dtb /boot/firmware/bcm2712-rpi-5-b.dtb
+rm ~/fix.dts
 reboot
 ```
