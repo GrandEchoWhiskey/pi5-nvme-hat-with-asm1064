@@ -18,3 +18,5 @@ sudo mv ~/fix.dtb /boot/firmware/bcm2712-rpi-5-b.dtb
 rm ~/fix.dts
 reboot
 ```
+
+### Python script comming soon!
